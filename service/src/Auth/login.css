@@ -36,7 +36,7 @@ input {
     box-sizing: border-box; 
 }
 
-button {
+.login-button {
     width: 100%; 
     padding: 10px; 
     background-color: #3f51b5;
@@ -48,6 +48,6 @@ button {
     transition: background-color 0.3s; 
 }
 
-button:hover {
+.login-button:hover {
     background-color: #303f9f;
 }

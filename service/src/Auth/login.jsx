@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../Auth/login.css'; 
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../AuthContext'; 
+import { useAuth } from '../context/AuthContext'; 
 
 const Login = () => {
     const [username, setUsername] = useState(''); 
@@ -77,7 +77,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button className='login-button' type="submit">Login</button>
             </form>
         </div>
     );

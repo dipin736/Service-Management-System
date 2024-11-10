@@ -1,0 +1,1 @@
+export const baseUrl = "http://masauto.jobeazy.in/api/"; 

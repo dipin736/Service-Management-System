@@ -1,0 +1,141 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.home-button, .logout-button, .add-new-button {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+}
+
+.home-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    margin-top: auto;
+}
+
+.add-new-button {
+    display: flex;
+    align-items: center;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.add-new-button svg {
+    margin-right: 8px;
+}
+
+.home-button:hover,
+.logout-button:hover,
+.add-new-button:hover {
+    opacity: 0.9;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    transition: padding 0.3s ease;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        transform: translateX(-100%); 
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    .sidebar.show {
+        transform: translateX(0); 
+    }
+
+    .home-button, .logout-button, .add-new-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .header h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .add-new-button {
+        font-size: 14px;
+    }
+
+    .toggle-sidebar {
+        display: block;
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        border-radius: 50%;
+        border: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+
+    .dashboard .sidebar button {
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .add-new-button {
+        font-size: 14px;
+    }
+}
