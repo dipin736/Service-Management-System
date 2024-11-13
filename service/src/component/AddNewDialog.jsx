@@ -138,9 +138,15 @@ const AddNewDialog = ({ open, onClose }) => {
         SubTotal: parseFloat(formData.SubTotal) || 0,
         Total: parseFloat(formData.Total) || 0,
         ReceivedAmount: parseFloat(formData.ReceivedAmount) || 0,
+        SaleDetail: [
+          {
+            ItemId: formData.ItemId,
+            Price: formData.SubTotal, // Assuming Price is the same as SubTotal
+          }
+        ]
       };
       axios
-        .post(`${baseUrl}order/insertSale`, payload)
+        .post(`${baseUrl}order/insertOrder`, payload)
         .then((response) => {
           console.log(response.data);
           onClose();

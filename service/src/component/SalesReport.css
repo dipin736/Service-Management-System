@@ -1,0 +1,20 @@
+.sales-report-table {
+    margin-top: 20px;
+  }
+  
+  .sales-report-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sales-report-table th,
+  .sales-report-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .sales-report-table th {
+    background-color: #f4f4f4;
+  }
+  

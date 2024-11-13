@@ -120,6 +120,38 @@
     }
 }
 
+.date-filters-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing between elements */
+    margin-bottom: 20px; /* Space below the filters */
+}
+
+.date-filters-container label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    color: #333; /* Adjust color as needed */
+    gap: 5px; /* Space between label text and input */
+}
+
+.date-filters-container input {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 170px; 
+}
+
+.date-filters-container button.add-new-button {
+    padding: 8px 16px;
+}
+
+
+
+
 @media (max-width: 480px) {
     .content {
         margin-left: 0;
